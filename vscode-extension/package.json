@@ -11,13 +11,13 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.reloadLightroomPlugins"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
+            "command": "extension.reloadLightroomPlugins",
+            "title": "Reload all Lightroom plugins"
         }]
     },
     "scripts": {
