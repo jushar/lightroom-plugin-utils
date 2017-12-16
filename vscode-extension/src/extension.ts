@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         // Launch launcher (that reloads all Lightroom plugins)
         const extensionPath = normalize(vscode.extensions.getExtension('jusonex.lightroom-plugin-utils').extensionPath);
-        const launcherProcess = child_process.execFile(`${extensionPath}/../bin/release/launcher.exe`);
+        const launcherProcess = child_process.execFile(`${extensionPath}/launcher.exe`);
         launcherProcess.stdout.on('data', data => {
             outputChannel.appendLine(data.toString());
             outputChannel.show(true);
