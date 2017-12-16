@@ -10,6 +10,7 @@ struct AgLuaUniverseInterface
 {
 	lua_State* luaVM;
 };
+
 using AgLuaUniverse_getMain_t = AgLuaUniverseInterface * (*)();
 using luaL_loadstring_t = int(*)(lua_State*, const char*);
 using lua_pcall_t = int(*)(lua_State*, int, int, int);

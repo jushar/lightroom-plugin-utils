@@ -14,6 +14,7 @@
         "onCommand:extension.reloadLightroomPlugins"
     ],
     "main": "./out/extension",
+    "icon": "icon.png",
     "contributes": {
         "commands": [{
             "command": "extension.reloadLightroomPlugins",

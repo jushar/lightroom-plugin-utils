@@ -1,6 +1,6 @@
 # Lightroom Plugin Development Utilities
 This project aims to improve the Lightroom plugin development process.
-It mainly consists of a backend application that excessively uses the Windows API to interact with Lightroom and a Visual Studio Code extension for the best user convenience.   
+It mainly consists of a backend application that excessively uses the Windows API to interact with Lightroom and a Visual Studio Code extension for the best user convenience.
 
 ## Features
 ### Plugin Reload
@@ -26,4 +26,10 @@ As a requirement, you need Visual Studio 2017 with C++ development components in
 ### Visual Studio Code Extension
 Make sure you have built the backend application before building the extension (as it's a direct requirement).
 
-Then, navigate to the _vscode-extension_ folder and you're finished by executing `build.bat`. The outcome is a vsix extension file that can be installed directly or later on uploaded to the marketplace.
+The next step is to navigate to the _vscode-extension_ folder and to install all required dependencies which are in fact:
+```
+npm install -g vsce
+npm install
+```
+
+Then, you're finished by executing `build.bat`. The outcome is a vsix extension file that can be installed directly or later on uploaded to the marketplace.
