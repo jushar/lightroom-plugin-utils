@@ -1,6 +1,8 @@
 # Lightroom Plugin Development Utilities
 This project aims to improve the Lightroom plugin development process.
-It mainly consists of a backend application that excessively uses the Windows API to interact with Lightroom and a Visual Studio Code extension for the best user convenience.
+It mainly consists of a backend application that excessively uses the Windows API to interact with Lightroom and a Visual Studio Code extension for the best user convenience.   
+
+__This project is in no way affiliated with Adobe Systems Incorporated.__
 
 ## Features
 ### Plugin Reload
