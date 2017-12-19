@@ -1,41 +1,59 @@
 {
-    "name": "lightroom-plugin-utils",
-    "displayName": "Lightroom Plugin Utils",
-    "description": "Collection of lightroom plugin development utilities",
-    "version": "0.0.1",
-    "publisher": "jusonex",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Jusonex/lightroom-plugin-utils.git"
-    },
-    "engines": {
-        "vscode": "^1.19.0"
-    },
-    "categories": [
-        "Other"
+  "name": "lightroom-plugin-utils",
+  "displayName": "Lightroom Plugin Utils",
+  "description": "Collection of lightroom plugin development utilities",
+  "version": "0.0.2",
+  "publisher": "jusonex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jusonex/lightroom-plugin-utils.git"
+  },
+  "engines": {
+    "vscode": "^1.19.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.reloadLightroomPlugins"
+  ],
+  "main": "./out/extension",
+  "icon": "icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.reloadLightroomPlugins",
+        "title": "Reload all Lightroom plugins"
+      }
     ],
-    "activationEvents": [
-        "onCommand:extension.reloadLightroomPlugins"
-    ],
-    "main": "./out/extension",
-    "icon": "icon.png",
-    "contributes": {
-        "commands": [{
-            "command": "extension.reloadLightroomPlugins",
-            "title": "Reload all Lightroom plugins"
-        }]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+    "configuration": {
+      "title": "Lightroom Plugin Utils configuration",
+      "properties": {
+        "lrpluginutils.enableAPI": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether or not to enable the HTTP API"
+        }
+      }
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/express": "^4.0.39",
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^7.0.43",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
 }

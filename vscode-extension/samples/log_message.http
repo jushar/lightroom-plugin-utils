@@ -1,0 +1,6 @@
+POST http://localhost:5864/log_message
+Content-Type: application/json
+
+{
+    "message": "Hello World"
+}
