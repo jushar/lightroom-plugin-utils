@@ -9,17 +9,26 @@
     "url": "https://github.com/Jusonex/lightroom-plugin-utils.git"
   },
   "engines": {
-    "vscode": "^1.19.0"
+    "vscode": "^1.18.1"
   },
   "categories": [
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.reloadLightroomPlugins"
+    "onCommand:extension.reloadLightroomPlugins",
+    "onView:lightroomPluginUtilsExplorer"
   ],
   "main": "./out/extension",
   "icon": "icon.png",
   "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "lightroomPluginUtilsExplorer",
+          "name": "Lightroom Utils Test Explorer"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "extension.reloadLightroomPlugins",

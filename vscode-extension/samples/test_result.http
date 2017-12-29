@@ -1,0 +1,8 @@
+POST http://localhost:5864/test_result
+Content-Type: application/json
+
+{
+    "test_suite": "MyFirstTestSuite",
+    "test_name": "Unit Test 1",
+    "succeeded": false
+}

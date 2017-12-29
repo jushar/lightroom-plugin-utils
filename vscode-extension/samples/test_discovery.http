@@ -1,0 +1,10 @@
+POST http://localhost:5864/test_discovery
+Content-Type: application/json
+
+{
+    "test_suites": {
+        "MyFirstTestSuite": [
+            "Unit Test 1", "Unit Test 2"
+        ]
+    }
+}
