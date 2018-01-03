@@ -2,7 +2,7 @@
   "name": "lightroom-plugin-utils",
   "displayName": "Lightroom Plugin Utils",
   "description": "Collection of lightroom plugin development utilities",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "jusonex",
   "repository": {
     "type": "git",
