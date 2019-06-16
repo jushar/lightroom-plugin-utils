@@ -2,7 +2,7 @@
 
 #include <Windows.h>
 
-constexpr const char* kCoreDllPath = "core.dll";
+const char* kCoreDllPath = "core.dll";
 
 int main(int argc, char* argv[])
 {
@@ -27,6 +27,7 @@ int main(int argc, char* argv[])
 	if (!hTargetWnd)
 	{
 		std::cout << "Lightroom window not found. Make sure Lightroom is running" << std::endl;
+		return 1;
 	}
 	
 	// Get window associated thread id and hook into the process
